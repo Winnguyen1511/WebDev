@@ -35,7 +35,9 @@ class LoginView
     }
     addEvents()
     {
-        this.btnLogIn.onclick = this.btnLogIn_OnClick//(this.presenter, this.validAccount);
+        //Handling the problem with handler using bind(this)
+        var btnLogInHandler = this.btnLogIn_OnClick.bind(this);
+        this.btnLogIn.addEventListener("click", btnLogInHandler);//(this.presenter, this.validAccount);
         this.btnLogIn.prototype = this;
         // console.log("btnLogIn", this.btnLogIn);
         this.txtEmail.addEventListener("focus",() =>{
@@ -83,11 +85,15 @@ class LoginView
             password:pass
         }
         // console.log(data)
-        this.prototype.validAccount(this.prototype.presenter,data);       
+        // this.prototype.validAccount(this.prototype.presenter,data);  
+        this.validAccount(data);     
     }
-    validAccount(presenter, data)
-    {
-        presenter.validAccount(data);
+    // validAccount(presenter, data)
+    // {
+    //     presenter.validAccount(data);
+    // }
+    validAccount(data) {
+        this.presenter.validAccount(data);
     }
     //Take the response from the presenter and
     //display the result. If there is an error, 

@@ -1,0 +1,4 @@
+name: "khoa",
+surname: "nguyen",
+age: 21,
+major: "Embedded Systems"
