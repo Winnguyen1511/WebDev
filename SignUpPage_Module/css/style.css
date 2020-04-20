@@ -3,6 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #eff3f5, #bfd4c8);
+    --popup-background-color:#555;
+    --popup-error-background-color:rgba(160, 12, 12, 0.705);
+    --popup-color:#fff;
+    --popup-border-color:rgb(49, 49, 49);
+    --popup-error-border-color:rgb(253, 19, 19);
+    
 }
 .signup{
     /* margin: 0 auto; */
@@ -20,37 +26,46 @@ body {
     margin-left: 60px;
     font-family: Arial, Helvetica, sans-serif;
 }
+#signup-popup{
+    position: absolute;
+    left: 10px;
+    top: 60px;
+}
+#login-popup{
+    position: absolute;
+    top: 10px;
+}
 .popup {
-    margin-left: 6%;
-    margin-right: 50%;
-    visibility: hidden;
+    /* margin-left: 6%;
+    margin-right: 50%; */
+    visibility: visible;
     cursor: pointer;
-    background-color: #555;
-    color: #fff;
+    background-color: var(--popup-background-color);
+    color: var(--popup-color);
     text-align: left;
     border-radius: 4px;
-    position: absolute;
+    position: relative;
     font-size: small;
-    left: 268px;
+    left: 50%;
 }
 .popup::after{
     content: "";
     position: absolute;
     border-width: 6px;
     border-style: solid;
-    border-color: transparent #555 transparent transparent ;
+    border-color: transparent var(--popup-background-color) transparent transparent ;
 }
 
 
 .popup-error{
     visibility: hidden;
-    background-color: rgba(160, 12, 12, 0.705);
+    background-color: var(--popup-error-background-color);
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(253, 19, 19);
+    border-color: var(--popup-error-border-color);
 }
 .popup-error::after{
-    border-color: transparent rgba(160, 12, 12, 0.705) transparent transparent;
+    border-color: transparent var(--popup-error-background-color) transparent transparent;
 }
 
 

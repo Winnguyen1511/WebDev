@@ -22,7 +22,7 @@
 .popup-first-name::after{   
     top: 100%;
     left: 15%;
-    border-color:#555 transparent transparent transparent ;
+    border-color:var(--popup-background-color) transparent transparent transparent ;
 }
 
 /* Style for Family name popup */

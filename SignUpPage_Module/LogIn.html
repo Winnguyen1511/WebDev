@@ -16,16 +16,21 @@
         </div>
 
         <div class="info">
-            <input class="textbox" type="text" placeholder="Your email" id="txtEmail">
-            <span class="popup popup-email popup-error" id="popupEmailError">
-                Please enter a valid email address.
-            </span><br>
-            <input class="textbox" type="password" placeholder="Your password"   id=txtPass>
-            <span class="popup popup-pass popup-error" id="popupPassError">
-                Please enter a valid password.
-            </span><br>
+            <div>
+                <input class="textbox" type="text"      placeholder="Your email"        id="txtEmail"><br>
+                <input class="textbox" type="password"  placeholder="Your password"     id=txtPass>
+            </div>
+            <div id="login-popup">
+                <span   class="popup popup-email popup-error"   id="popupEmailError">
+                    Please enter a valid email address.
+                </span>
+                <span   class="popup popup-pass popup-error"    id="popupPassError">
+                    Please enter a valid password.
+                </span>
+            </div>
+            
             <a href="">Forgot password?</a><br><br>
-            <input class="button" type="button" value="LOG IN" id="btnLogIn"><br><br>
+            <input  class="button" type="button" value="LOG IN" id="btnLogIn"><br><br>
             <div>
                 Don't have an account? <a href="SignUp.html">Sign Up</a>
             </div>
