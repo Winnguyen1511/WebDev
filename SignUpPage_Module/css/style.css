@@ -8,7 +8,7 @@ body {
     --popup-color:#fff;
     --popup-border-color:rgb(49, 49, 49);
     --popup-error-border-color:rgb(253, 19, 19);
-    
+    --popup-top:60px;
 }
 .signup{
     /* margin: 0 auto; */
@@ -28,17 +28,25 @@ body {
 }
 #signup-popup{
     position: absolute;
-    left: 10px;
-    top: 60px;
+    /* left: 120px; */
+    top: var(--popup-top);
+    /* height: 82px; */
 }
 #login-popup{
     position: absolute;
-    top: 10px;
+    top: var(--popup-top);
+    /* left:50%; */
+}
+
+#signup-popup-error{
+    position: absolute;
+    top:60px;
 }
 .popup {
     /* margin-left: 6%;
     margin-right: 50%; */
-    visibility: visible;
+    widows: 300px;
+    visibility: hidden;
     cursor: pointer;
     background-color: var(--popup-background-color);
     color: var(--popup-color);
@@ -46,19 +54,24 @@ body {
     border-radius: 4px;
     position: relative;
     font-size: small;
-    left: 50%;
+    left: 40%;
 }
 .popup::after{
     content: "";
-    position: absolute;
+    position: relative;
+    /* line-height:0; */
+    display: inline-block;
+    /* border-radius: px; */
     border-width: 6px;
+    width: 0;
+    height: 0;
     border-style: solid;
     border-color: transparent var(--popup-background-color) transparent transparent ;
 }
 
 
 .popup-error{
-    visibility: hidden;
+    visibility: visible;
     background-color: var(--popup-error-background-color);
     border-style: solid;
     border-width: 1px;
