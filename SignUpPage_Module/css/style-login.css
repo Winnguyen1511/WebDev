@@ -1,29 +1,25 @@
 .popup-email{
-    width: 340px;
+    /* width: 340px;
     padding: 8px 8px;
     top:15px;
-    left:263px;
-    /* top: 68px; */
-    /* margin-bottom: 10em; */
+    left:263px; */
+
 }
 .popup-email::after{
-    top: 22%;
-    /* left: 96%;     */
-    /* padding:0px; */
-    /* margin-top:2px; */
+    /* top: 22%;
     height: 0px;
-    left: -96.5%;
+    left: -96.5%; */
 }
 
 /* Style for password and retype popup */
 .popup-pass{
-    width: 318px;
+    /* width: 318px;
     padding: 8px 8px;
     top: 37px;
-    left: 263px;
+    left: 263px; */
 }
 .popup-pass::after{
-    top: 22%;
+    /* top: 22%;
     /* left: 96%; */
-    left: -85.5%;
+    /* left: -85.5%;  */
 }

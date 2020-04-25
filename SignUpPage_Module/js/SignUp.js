@@ -4,6 +4,18 @@ const mthArr = ["January", "February", "March", "April", "May",
                         "June", "July", "August", "September", "October",
                         "November", "December"];
 const genderList = [...document.getElementsByName("ckbGender")];
+
+//Dynamic text for popup:
+const popuptxt = {
+    "name":{"normal":"What's your name?"},
+    "email":{"normal":"You'll use this when you log in.",
+            "error":"Please enter a valid email address."},
+    "pass":{"normal":"Enter a combination of at least six numbers and characters.",
+            "error":"Please enter a valid password."},
+    "retype":{"normal":"Retype your password here.",
+            "error":"Password retype mismatch."}
+}
+
 // console.log(genderList[0].checked);
 let gender = genderList.reduce((prev, cur) =>{
     return prev.checked == true ? prev : cur;
@@ -16,6 +28,9 @@ function radioButtonHandler(value)
 let date = new Date();
 var txtFirstName, txtFamilyName;
 var txtEmail, txtPass, txtRetypePass;
+
+var popupFamilyName, popupEmail, popupPass, popupRetype;
+
 var sltDate, sltMonth, sltYear;
 var btnSignUp;
 
@@ -30,6 +45,13 @@ function addElements()
     txtEmail = document.getElementById("txtEmail");
     txtPass = document.getElementById("txtPass");
     txtRetypePass = document.getElementById("txtRetypePass");
+    
+    //Add popups:
+    popupFamilyName = document.getElementById("popupFamilyName");
+    popupEmail = document.getElementById("popupEmail");
+    popupPass = document.getElementById("popupPass")
+    popupRetype = document.getElementById("popupRetype")    
+    
     //Add slt and add option:
     sltDate = document.getElementById("sltDate");
     let optDefault = document.createElement("option");
@@ -84,73 +106,79 @@ function addEvents()
     txtFirstName.addEventListener("focus", ()=>{
         //Popup for Firstname
         // console.log("Focus first name");
-        const popup = document.getElementById("popupFirstName");
-        popup.classList.add("show");
-        
+        // const popup = document.getElementById("popupFirstName");
+        popupFamilyName.innerHTML = popuptxt['name']['normal'];
+        popupFamilyName.classList.add("show");
     });
     txtFirstName.addEventListener("focusout", ()=>{
         // console.log("Out first name");
-        const popup = document.getElementById("popupFirstName");
-        popup.classList.remove("show");
+        // const popup = document.getElementById("popupFirstName");
+        popupFamilyName.classList.remove("show");
     });
 
     txtFamilyName.addEventListener("focus", ()=>{
         //Popup for Family name
         // console.log("Focus family name");
-        const popup = document.getElementById("popupFamilyName");
-        popup.classList.add("show");
+        // const popup = document.getElementById("popupFamilyName");
+        popupFamilyName.innerHTML = popuptxt['name']['normal'];
+        popupFamilyName.classList.add("show");
     });
     txtFamilyName.addEventListener("focusout", ()=>{
         // console.log("Out Family name");
-        const popup = document.getElementById("popupFamilyName");
-        popup.classList.remove("show");
+        // const popup = document.getElementById("popupFamilyName");
+        popupFamilyName.classList.remove("show");
     });
 
     txtEmail.addEventListener("focus", ()=>{
         // console.log("Focus email");
-        const popup = document.getElementById("popupEmail");
-        popup.classList.add("show");
+        // const popup = document.getElementById("popupEmail");
+        popupEmail.innerHTML = popuptxt['email']['normal'];
+        popupEmail.classList.add("show");
         txtEmail.classList.remove("text-error");
-        const popupError = document.getElementById("popupEmailError");
-        popupError.classList.remove("show");
+        popupEmail.classList.remove("popup-error")
+        // const popupError = document.getElementById("popupEmailError");
+        // popupError.classList.remove("show");
     });
     txtEmail.addEventListener("focusout", ()=>{
         // console.log("Out Email");
-        const popup = document.getElementById("popupEmail");
-        popup.classList.remove("show");
+        // const popup = document.getElementById("popupEmail");
+        popupEmail.classList.remove("show");
     });
 
     txtPass.addEventListener("focus", ()=>{
         //Popup for password
         // console.log("Focus password");
-        const popup = document.getElementById("popupPass");
-        popup.classList.add("show");
+        // const popup = document.getElementById("popupPass");
+        popupPass.innerHTML = popuptxt['pass']['normal'];
+        popupPass.classList.add("show");
         txtPass.classList.remove("text-error");
-        const popupError = document.getElementById("popupPassError");
-        popupError.classList.remove("show");
+        popupPass.classList.remove("popup-error")
+        // const popupError = document.getElementById("popupPassError");
+        // popupError.classList.remove("show");
 
     });
     
     txtPass.addEventListener("focusout", ()=>{
         // console.log("Out password");
-        const popup = document.getElementById("popupPass");
-        popup.classList.remove("show");
+        // const popup = document.getElementById("popupPass");
+        popupPass.classList.remove("show");
     });
-
 
     txtRetypePass.addEventListener("focus", ()=>{
         //Popup for retype password
         // console.log("Focus retype password");
-        const popup = document.getElementById("popupRetype");
-        popup.classList.add("show");
+        // const popup = document.getElementById("popupRetype");
+        popupRetype.innerHTML = popuptxt['retype']['normal'];
+        popupRetype.classList.add("show");
         txtRetypePass.classList.remove("text-error");
-        const popupError = document.getElementById("popupRetypeError");
-        popupError.classList.remove("show");
+        popupRetype.classList.remove("popup-error");
+        // const popupError = document.getElementById("popupRetypeError");
+        // popupError.classList.remove("show");
     });
     txtRetypePass.addEventListener("focusout", ()=>{
         // console.log("Out Retype pass");
-        const popup = document.getElementById("popupRetype");
-        popup.classList.remove("show");
+        // const popup = document.getElementById("popupRetype");
+        popupRetype.classList.remove("show");
     });
     //add onchange event for radio buttons:
     radioFemale.addEventListener("change", ()=>{
@@ -249,23 +277,29 @@ function InforHandler()
     if(emailCheck == false)
     {
         txtEmail.classList.add("text-error");
-        const popupError = document.getElementById("popupEmailError");
-        popupError.classList.add("show");
+        // const popupError = document.getElementById("popupEmailError");
+        popupEmail.innerHTML = popuptxt['email']['error'];
+        popupEmail.classList.add("popup-error")
+        popupEmail.classList.add("show");
         stat = false;
     }
     let passCheck = Valid.validPass(txtPass.value);
     if(passCheck == false)
     {
         txtPass.classList.add("text-error");
-        const popupError = document.getElementById("popupPassError");
-        popupError.classList.add("show");
+        // const popupError = document.getElementById("popupPassError");
+        popupPass.innerHTML = popuptxt['pass']['error'];
+        popupPass.classList.add("popup-error");
+        popupPass.classList.add("show");
         stat = false;
     }
     if(txtPass.value != txtRetypePass.value)
     {
         txtRetypePass.classList.add("text-error");
-        const popupError = document.getElementById("popupRetypeError");
-        popupError.classList.add("show");
+        // const popupError = document.getElementById("popupRetypeError");
+        popupRetype.innerHTML = popuptxt['retype']['error'];
+        popupRetype.classList.add("popup-error");
+        popupRetype.classList.add("show");
         stat = false;
     }
     return stat;

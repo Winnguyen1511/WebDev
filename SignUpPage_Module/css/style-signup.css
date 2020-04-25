@@ -28,45 +28,47 @@
 /* Style for Family name popup */
 .popup-family-name{
     width: 160px;
-    padding: 8px 0px;
-    top: -7px;
+    /* padding: 8px 0px; */
+    /* top: -7px; */
     /* left:40%; */
-    text-align: center;
+    /* text-align: center; */
 }
 .popup-family-name::after{
     /* top: 30%; */
-    left: -21.2%;
+    /* left: -21.2%; */
 }
 
 /* Style for Email popup */
 .popup-email{
-    width: 340px;
-    padding: 8px 8px;
+    /* width: 340px; */
+    /* padding: 8px 8px; */
     /* top: 138px; */
-    top:15px;
+    /* top:15px; */
+    width: 280px;
 }
 .popup-email::after{
-    top: 22%;
-    left: -80%;    
+    /* top: 22%;
+    left: -80%;     */
 }
 
 /* Style for password and retype popup */
 .popup-pass{
-    width: 318px;
+    /* width: 318px;
     padding: 8px 8px;
-    top: 20px;
+    top: 20px; */
 }
 .popup-pass::after{
-    top: 22%;
-    left: -98.5%;
+    /* top: 22%;
+    left: -98.5%; */
 }
 .popup-retype{
-    width: 200px;
+    /* width: 200px;
     padding: 8px 8px;
     text-align: center;
-    top: 22px;
+    top: 22px; */
+    width:200px;
 }
 .popup-retype::after{
-    top: 30%;
-    left: -31.3%;
+    /* top: 30%;
+    left: -31.3%; */
 }

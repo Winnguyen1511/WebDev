@@ -7,16 +7,28 @@ body {
     --popup-error-background-color:rgba(160, 12, 12, 0.705);
     --popup-color:#fff;
     --popup-border-color:rgb(49, 49, 49);
-    --popup-error-border-color:rgb(253, 19, 19);
+    --popup-error-border-color:rgb(228, 17, 10);
     --popup-top:60px;
+    --info-width:265px;
+    --popup-before-border:5px;
 }
 .signup{
     /* margin: 0 auto; */
     /* width: ; */
-    width: 100%;
+    width: calc(var(--info-width)*3);
     margin-left: 6%;
-    margin-right: 50%;  
+    /* margin-right: 50%;   */
+}
 
+.info-span
+{
+    width: var(--info-width);
+    display :inline-block;
+}
+.popup-span
+{
+    width: var(--info-width*1.5);
+    display: inline-block;
 }
 .logo{
     /* border: 5px; */
@@ -27,25 +39,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 #signup-popup{
-    position: absolute;
-    /* left: 120px; */
-    top: var(--popup-top);
+    /* position: absolute;
+
+    top: var(--popup-top); */
+
     /* height: 82px; */
 }
 #login-popup{
-    position: absolute;
-    top: var(--popup-top);
-    /* left:50%; */
+    /* position: relative;
+
+    top: var(--popup-top); */
+
 }
 
 #signup-popup-error{
-    position: absolute;
-    top:60px;
+    /* position: absolute;
+    top:60px; */
 }
 .popup {
     /* margin-left: 6%;
     margin-right: 50%; */
-    widows: 300px;
+    /* widows: 300px;
     visibility: hidden;
     cursor: pointer;
     background-color: var(--popup-background-color);
@@ -54,30 +68,52 @@ body {
     border-radius: 4px;
     position: relative;
     font-size: small;
-    left: 40%;
+    left: 40%; */
+    visibility: hidden;
+    background-color: var(--popup-background-color);
+    color: var(--popup-color);
+    cursor: pointer;
+    font-size: small;
+    margin:10px;
+    padding:8px 8px 8px 0px;
+    border-radius: 5px;
+    text-align: left;
+    margin-left:var(--popup-before-border);
 }
-.popup::after{
-    content: "";
+.popup::before{
+    /* content: "";
     position: relative;
-    /* line-height:0; */
+
     display: inline-block;
-    /* border-radius: px; */
+
     border-width: 6px;
     width: 0;
     height: 0;
     border-style: solid;
+    border-color: transparent var(--popup-background-color) transparent transparent ; */
+    content:"";
+    display: inline-block;
+    position: relative;
+    border-style: solid;
+    border-width: var(--popup-before-border);
     border-color: transparent var(--popup-background-color) transparent transparent ;
+    right: 10px;
 }
 
 
 .popup-error{
-    visibility: visible;
+    /* visibility: visible;
     background-color: var(--popup-error-background-color);
     border-style: solid;
     border-width: 1px;
+    border-color: var(--popup-error-border-color); */
+    visibility: hidden;
+    background-color: var(--popup-error-background-color);
     border-color: var(--popup-error-border-color);
+    border-width: 1px;
+    border-style: solid;
 }
-.popup-error::after{
+.popup-error::before{
     border-color: transparent var(--popup-error-background-color) transparent transparent;
 }
 
