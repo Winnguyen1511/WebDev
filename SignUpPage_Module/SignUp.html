@@ -46,24 +46,28 @@
                     <select name="sltMonth" id="sltMonth"></select>
                     <select name="sltYear"  id="sltYear"></select>
                 </div>
-                <p>Gender</p>
+                
 
-                <div name="gender">
+                <div class="gender">
                     <form action="">
-                        <label for="female">
-                            <input type="radio" name="ckbGender" value="female" checked="checked" id="radioFemale">
-                            Female
-                        </label>
-                        
-                        <label for="male">
-                            <input type="radio" name="ckbGender" value="male" id="radioMale">
-                            Male
-                        </label>
-                        
-                        <label for="others">
-                            <input type="radio" name="ckbGender" value="others" id="radioOther">
-                            Others
-                        </label><br><br>
+                        <fieldset >
+                            <legend>Gender</legend>
+                            <label for="radioFemale">
+                                <input type="radio" name="ckbGender" value="female" checked="checked" id="radioFemale">
+                                Female
+                            </label>
+                            
+                            <label for="radioMale">
+                                <input type="radio" name="ckbGender" value="male" id="radioMale">
+                                Male
+                            </label>
+                            
+                            <label for="radioOther">
+                                <input type="radio" name="ckbGender" value="others" id="radioOther">
+                                Others
+                            </label>
+                        </fieldset>
+                        <br><br>
                     </form>
                 </div>
 

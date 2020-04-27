@@ -72,3 +72,8 @@
     /* top: 30%;
     left: -31.3%; */
 }
+.gender 
+{
+    font-size:small;
+    width:var(--info-width);
+}
