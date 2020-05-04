@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" type="text/javascript" defer></script>
+    <title>Product Landing</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img id="header-img" src="https://apprecs.org/ios/images/app-icons/256/b1/1014838705.jpg" alt="Company logo">
+            <div><h2>User Story</h2></div>
+            <nav id="nav-bar">
+                <a href="#feature" class="nav-link">Feature</a>
+                <a href="#work" class="nav-link">How It Works</a>
+                <a href="#price" class="nav-link">Pricing</a>
+            </nav>
+        </div>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <div>
+                <input name="email" type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div>
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+        <div id="content">
+            <div id="feature">Feature</div>
+            <div id="work">How It Works?<br>
+                <video id="video" width="400" controls>
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                  </video>
+            </div>
+            <div id="price">Pricing</div>
+        </div>
+    </div>
+</body>
+</html>

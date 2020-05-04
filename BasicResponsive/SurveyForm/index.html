@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="script.js" type="text/javascript" defer></script>
+    <title>Survey form</title>
+</head>
+<body>
+    <div id="main">
+        <div id=head>
+            <h1 id="title">User Story Survey</h1>
+            <p id="description"><em>Thank you for taking time to help us improve the platform</em></p>
+        </div>
+        <div>
+            <form id="survey-form" action="#">
+                <div><label for="name" id="name-label" >Name</label><br>
+                    <input class="info" type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div><label for="email" id="email-label" >Email</label><br>
+                    <input class="info" type="text" id="email" placeholder="Enter your email" pattern="^[A-Za-z][\w-\.]+@([\w-]+\.)+[\w-]{1,4}$" required>
+                </div>
+                <div><label for="number" id="number-label" >Number</label><br>
+                    <input class="info" type="text" id="number" placeholder="Enter your number" min="0" max="99999999" pattern="^\d+$" required>
+                </div>
+                <div>
+                    <label for="dropdown" id="dropdown-label">Please select your role</label><br>
+                    <select id="dropdown">
+                        <option value="main">Main Character</option>
+                        <option value="side">Side Character</option>
+                        <option value="support">Supporter</option>
+                    </select>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Element</legend>
+                        <div>
+                            <input type="radio" id="thunder" name="element" value="thunder">
+                            <label for="thunder" id="thunder-label">Thunder</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="fire" name="element" value="fire">
+                            <label for="fire" id="fire-label">Fire</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="water" name="element" value="water">
+                            <label for="water" id="water-label">Water</label>
+                        </div>
+                    </fieldset>
+                    
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Capabilities</legend>
+                        <div>
+                            <input type="checkbox" id="trainer" name="cap" value="trainer">
+                            <label for="trainer">Dragon Trainer</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="gunner" name="cap" value="gunner">
+                            <label for="gunner">Gunner</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="swordman" name="cap" value="swordman">
+                            <label for="swordman">Sword Man</label>
+                        </div>
+                        <div>
+                            <p>Any comments or suggestions?</p> 
+                            <textarea name="comment" rows="10" cols="30" placeholder="Enter your comment here..."></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <button id="btnSubmit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

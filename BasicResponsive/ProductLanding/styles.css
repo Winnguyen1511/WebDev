@@ -1,0 +1,21 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0px;
+}
+
+#email:invalid {
+    box-shadow: 0 0 5px 1px solid red;
+}
+
+@media (max-width:800px) {
+    #video {
+        width: 200px;
+    }
+}
