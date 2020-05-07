@@ -1,0 +1,29 @@
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+
+}
+
+#navbar {
+    position: fixed;
+    /* display: inline-block; */
+    top: 0px;
+    width: 100%;
+}
+#navbar a {
+    float: right;
+    display: block;
+    text-align: center;
+
+}
+
+#welcome-section {
+    height: 100vh;
+}
+@media (max-width:800px)
+{
+    #projects {
+        display: flex;
+        flex-direction: column;
+    }
+}
