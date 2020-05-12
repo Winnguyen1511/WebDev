@@ -5,10 +5,50 @@ body {
 }
 #projects {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-
+    grid-template-columns: repeat(3, 1fr);
+    background: #45567d;
 }
 
+#projects a {
+    /* padding: 0px 10px 0px 10px; */
+    border-radius: 3px ;
+    text-decoration: none;
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); */
+}
+#projects p {
+    margin: 0;
+}
+#projects img {
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 6.8rem);
+}
+.project-tile {
+    padding: 1.3em;
+    
+}
+
+.project-title {
+    background-color: #303841;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    color: aliceblue;
+    padding: 1em;
+}
+.span-three {
+    grid-column: span 3;
+    text-align: center;
+}
+#projects h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: aliceblue;
+}
 #navbar {
     position: fixed;
     /* display: inline-block; */
@@ -71,5 +111,7 @@ body {
     #projects {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
