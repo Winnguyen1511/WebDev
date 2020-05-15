@@ -1,11 +1,10 @@
 $(document).ready(function(){
-
     $(".nav-link").click(function(){
         // console.log("clicked!")
         var link = $(this).data('link');
         // console.log(link);
         $("html, body").animate({
-            scrollTop: $(link).offset().top -60
+            scrollTop: $(link).offset().top -60 
         }, 350);
     });
 
@@ -34,4 +33,18 @@ $(document).ready(function(){
             $(this).find("img").css("transform", "none");
         }
     );
+    $(window).scroll(function(){
+        // console.log("Out");
+        if($(window).scrollTop() != 0)
+        {
+            // console.log("Here");
+
+            $("#navbar").css("background-color", "var(--main-black)");
+
+        }
+        else{
+            $("#navbar").css("background-color", "transparent");
+
+        }
+    });
 });

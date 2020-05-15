@@ -9,18 +9,83 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="generic-styles.css" type="text/css">
     <script src="script.js" type="text/javascript" defer></script>
     
     <title>Portfolio Website</title>
 </head>
 <body>
     <section id="welcome-section">
-        <div><h1 id="welcome">Hello I am Victor</h1></div>
+        <div><h1 id="welcome">Hello, I am Victor</h1></div>
         <div><p id="description">Ex-Embedded Developer</p></div>
     </section>
-    <section id="projects">
+    <section id="about" class="content">
+        <div style="height: 12  0px;">
+            <h1>About</h1>
+        </div>
+        <div class="slider">
+            <div id="slide-about" class="slide flex" >
+                <div id="img-about">
+                    <img src="./img/about-victor-mini.png" alt="about-victor-2">
+                </div>
+                <div id="slide-about-info">
+                    <div>   
+                        <p>Hello, my name is Nguyen Huynh Dang Khoa (aka Victor Nguyen). I was an 
+                            Embedded Developer in DUT,
+                             however, I have passion in Software programming.
+                              So I start to develop software and website
+                            in 2019 and have created products, projects for both industry and education. 
+                        </p>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="element-medium-space-right border-dashed border-thin border-right-enable" style="border-color: rgb(153, 163, 172);"><h2>Software and Web developer</h2>
+                            <p>I love clean and creative coding.</p>
+                            <div id="software-web-dev">
+                                <div>
+                                    <h4 class="font-emphasis">Language I code</h4>
+                                    <ul>
+                                        <li>C/C++, Python</li>
+                                        <li>HTML, CSS, Javascript</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-emphasis">Tools I use</h5>
+                                    <ul>
+                                        <li>VS Code, XCode</li>
+                                        <li>Linux Programming Environment</li>
+                                    </ul>
+                                </div> 
+                            </div>
+                        </div>
+                        <div  class="element-medium-space-left"><h2>Teaching Assistance</h2>
+                            <p>I am also a TA at my university for 3 years.</p>
+                            <h4 class="font-emphasis">Work experience</h4>
+                            <ul>
+                                <li>04/2018-06/2018: General Chemistry</li>
+                                <li>07/2018-09/2018: Computer Science</li>
+                                <li>01/2019-03/2019: Linear Algebra</li>
+                                <li>05/2018-07/2019: Calculus 1</li>
+                                <li>09/2018-12/2019: Calculus 2</li>
+                                <li>01/2020-now    : Digital Circuit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="slide">Soft Skills</div>
+            <div class="slide">Programming</div>
+        </div>
+        <div id="slide-control">
+            slide-control
+        </div>
+    </section>
+    <section id="projects" class="content">
         <div class="span-three">
-            <h1>Projects</h1>
+            <h1>My Recent Projects</h1>
         </div>
         <div class="project-tile" id="lrgd">
             <a href="https://lrgd.000webhostapp.com/" target="_blank">
@@ -64,8 +129,8 @@
                 <div id="contact-container-1" class="contact-container">
                     <h1 id="contact-menu">Menu</h1>
                     <ul id="contact-list">
-                        <li><a href="#" class="nav-link" data-link="#welcome-section">Main page</a></li>
-                        <li><a href="#" class="nav-link" data-link="#welcome-section">About Us</a></li>
+                        <li><a href="#" class="nav-link" data-link="#welcome-section">Home</a></li>
+                        <li><a href="#" class="nav-link" data-link="#about">About Me</a></li>
                         <li><a href="#" class="nav-link" data-link="#projects">Projects</a></li>
                         <li><a href="#" class="nav-link" data-link="#contact">Contact</a></li>
                     </ul>
@@ -102,7 +167,8 @@
     
     <nav id="navbar">
         <div>
-            <a href="#" class="nav-link" data-link="#welcome-section">About</a>
+            <a href="#" class="nav-link" data-link="#welcome-section">HOME</a>
+            <a href="#" class="nav-link" data-link="#about">ABOUT</a>
             <a href="#" class="nav-link" data-link="#projects">Projects</a>
             <a href="#" class="nav-link" data-link="#contact">Contact</a>
         </div>
