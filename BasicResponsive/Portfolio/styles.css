@@ -38,8 +38,30 @@ body {
     /* flex-shrink: 0; */
     /* flex-grow: 0; */
 }
+.content-header  {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+}
+
+.content-header h1{
+    margin-bottom: 3px;
+    /* text-align: center; */
+}
 #slide-about-info {
     /* display: block; */
+}
+.underline {
+    background-color: var(--main-black);
+    /* content: "asdasd"; */
+    /* display: block;*/
+    height: 5px;
+    width: 110px;
+    /* margin-bottom: 5px; */
 }
 #img-about {
     /* display: flex; */
@@ -60,7 +82,7 @@ body {
     background: var(--main-white-opace);
     /* height: 100%; */
     
-    /* height: 100vh; */
+    height: 100vh;
     padding-bottom: 100px;
 }   
 
@@ -92,7 +114,7 @@ body {
     overflow: hidden;
 }
 .project-tile {
-    margin-top: 2em;
+    margin-top: 1em;
     padding: 1.2em;
     /* border-style: dashed;
     border-width: thin;
@@ -145,6 +167,7 @@ body {
     font-family: 'Raleway';
     font-size: 3rem;
     font-weight: 700;
+    /* margin-bottom: 3px; */
     color: var(--text--black);
 }
 #navbar {
