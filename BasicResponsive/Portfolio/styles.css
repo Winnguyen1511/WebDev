@@ -15,6 +15,7 @@ body {
     /* display: block; */
     /* cursor: pointer; */
     font-family: 'Raleway', sans-serif;
+    --number-slides: 3;
     color: var(--main-black);
 }
 
@@ -80,10 +81,10 @@ body {
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     /* grid-template-columns: 2fr 1fr 1fr; */
     background: var(--main-white-opace);
-    /* height: 100%; */
+    height: 100%;
     
-    height: 100vh;
-    padding-bottom: 100px;
+    /* height: 100vh; */
+    padding-bottom: 140px;
 }   
 
 .code {
@@ -121,6 +122,7 @@ body {
     border-color: transparent; */
     border-color: transparent;
     transition: border-color 0.4s;
+    /* margin-bottom: 100px; */
     /* background: #000; */
     /* background-color: transparent; */
     /* justify-content: center; */
@@ -214,21 +216,78 @@ body {
     opacity: 0.9;
     color: var(--main-red   );
 }
-
-#welcome-section {
+.slideshow {
     height: 100vh;
-    /* background: linear-gradient(45deg,rgb(43, 42, 42), rgb(3, 3, 3) ); */
+    /* width: 100vw; */
+    overflow: hidden;
+}
+.slides {
+    width: 300%;
+    display: flex;
+}
+.slide {
+    width: 33.33%;
+    height: 100vh;
+    transition: 0.6s;
+}
+.slide-content {
+    height: 100vh;
     background-color: #000;
+    width : 100vw;
+    background-size:100% ;
+    color: white;
+}
+
+#radio-container {
+    position: absolute;
+    background-color: transparent;
+    visibility: hidden;
+}
+.slide-bar {
+    position: absolute;
+    left: 50%;
+    top : 93vh;
+    display: flex;
+    transform: translate(-50%);
+}
+.bar {
+    width: 40px;
+    height: 6px;
+    
+    border: 1px solid #fff;
+    
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bar:hover {
+    opacity: 0.8;
+    background-color: var(--main-white-opace);
+}
+#welcome-section {
+    /* height: 100vh; */
+    /* background: linear-gradient(45deg,rgb(43, 42, 42), rgb(3, 3, 3) ); */
+    /* background-color: #000; */
+    /* width: 100vw; */
     /* background-image : linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
     background-image: url("img/ImageHero1.jpg");
-    background-size: 100%;
+    /* background-size: 100%; */
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
+    text-align: center;    
     color: white;
     font-family:"Raleway", sans-serif;
 }
+#slide2 {
+    background-image: url("img/slide2.jpg");
+    
+}
+
+#slide3 {
+    background-image: url("img/slide3.jpg");
+}
+
 #welcome-section h1{
     font-size: 4.6em;
     margin-bottom: 0px;
@@ -344,11 +403,13 @@ footer a{
 
 @media (max-width:800px)
 {
+    
     #projects {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
     }
     .project-tile {
         width: 70%;
@@ -361,7 +422,11 @@ footer a{
         margin: 0 0 30px 0;
         height: 100%;
     }
+    #welcome-section {
+        background-size: auto;
+    }
     #about {
+        /* display: ; */
         height: 100%;
     }
     #slide-about {

@@ -3,6 +3,14 @@ $(document).ready(function(){
     $('.content h1').hide('fast');
     $('.project-tile a').hide('fast');
     $('.underline').hide('fast');
+    $('#r1').trigger('click');
+    $("label[for='r1']").removeClass('label-unchecked').addClass('label-checked');
+    var slideCount = 0;
+    const number_of_slides = 3;
+    window.setInterval(function () {
+        $("input[id='r"+(slideCount+1).toString()+"']").trigger('click');
+        slideCount = (slideCount+1)%number_of_slides;
+    }, 5000);
     var windowHeight = $(window).height();
     var aboutLoaded = false;
     var projectsLoaded = false;
@@ -113,4 +121,20 @@ $(document).ready(function(){
         // aboutLoaded = 1;
         // console.log('About load=', aboutLoaded)
     });
+    $('input[type=radio]').click(function(){
+        // console.log($(this).attr('name'));
+        // console.log($(this).attr('id'));
+        // console.log($(this).attr('checked'));
+        $("label").addClass('label-unchecked');
+        if($(this).prop('checked') == true)
+        {
+            console.log("true");
+            $("label[for='"+$(this).attr('id')+"']").removeClass('label-unchecked').addClass('label-checked');
+            var num = parseInt($(this).data('slide'));
+            // console.log($('.slides:nth-child(1)'))
+            $('.s1').css('margin-left', (-(num-1) *33.33).toString()+'%')
+        }
+        
+    });
+
 });

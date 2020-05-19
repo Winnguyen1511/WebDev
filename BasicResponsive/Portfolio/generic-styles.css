@@ -88,3 +88,13 @@
     border-right: none;
     border-bottom: none;
 }
+
+.label-checked {
+    background-color: white;
+    opacity: 1;
+}
+
+.label-unchecked {
+    opacity: 0.7;
+    background-color: rgb(225, 237, 248);
+}

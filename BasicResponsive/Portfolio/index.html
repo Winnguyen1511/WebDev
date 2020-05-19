@@ -20,17 +20,44 @@
     <title>Portfolio Website</title>
 </head>
 <body>
-    <section id="welcome-section">
-        <div><h1 id="welcome">Hello, I am Victor</h1></div>
-        <div><p id="description">Ex-Embedded Developer</p></div>
-    </section>
+    <div class="slideshow">
+        <div id="radio-container">
+            <input type="radio" name="r" id="r1" data-slide='1'>
+            <input type="radio" name="r" id="r2" data-slide='2'>
+            <input type="radio" name="r" id="r3" data-slide='3'>
+        </div>
+        <div class="slides">
+            <div class="slide s1">
+                <div id="welcome-section" class="slide-content">
+                    <div><h1 id="welcome">Hello, I am Victor</h1></div>
+                    <div><p id="description">Ex-Embedded Developer</p></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div id="slide2" class="slide-content">
+
+                </div>
+            </div>
+            <div class="slide">
+                <div id="slide3" class="slide-content">
+
+                </div>
+            </div>
+        </div>
+        <div class="slide-bar">
+            <label for="r1" class="bar label-unchecked"></label>
+            <label for="r2" class="bar label-unchecked"></label>
+            <label for="r3" class="bar label-unchecked"></label>
+        </div>
+    </div>
+    
     <section id="about" class="content">
         <div style="height: 120px;" class="content-header">
             <h1>About</h1>
             <div class="underline"></div>
         </div>
         <div class="slider">
-            <div id="slide-about" class="slide flex" >
+            <div id="slide-about" class="flex" >
                 <div id="img-about">
                     <img src="./img/about-victor-mini.png" alt="about-victor-2">
                 </div>
@@ -78,8 +105,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
                 </div>
             </div>
             <!-- <div class="slide">Soft Skills</div> -->
