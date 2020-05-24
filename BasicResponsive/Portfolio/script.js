@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.underline').hide('fast');
     $('#r1').trigger('click');
     $("label[for='r1']").removeClass('label-unchecked').addClass('label-checked');
+    $('#skills .skills-box div').hide('fast');
     var slideCount = 0;
     const number_of_slides = 3;
     window.setInterval(function () {
@@ -16,6 +17,8 @@ $(document).ready(function(){
     var projectsLoaded = false;
     var aboutContentLoaded = false;
     var projectsContentLoaded = false;
+    var skillsLoaded = false;
+    var skillsContentLoaded = false;
     console.log(windowHeight)
     $(".nav-link").click(function(){
         // console.log("clicked!")
@@ -86,6 +89,24 @@ $(document).ready(function(){
                 $('#about img, #software-web-dev, #teaching-assistance').show('drop',{direction: 'down'}, 800)
             }
         }  
+
+        if(skillsLoaded == false)
+        {
+            if(skillsContentLoaded ==false)
+            {
+                if($(window).scrollTop() - windowHeight > 40)
+                {
+                    $('#skills h1').show('drop',{direction: 'right'},800);
+                    $('#skills .underline').show('drop', {direction: 'left'}, 800);
+                    skillsContentLoaded = true;
+                }
+            }
+            if($(window).scrollTop() - windowHeight > 200)
+            {
+                skillsLoaded = true;
+                $('#skills .skills-box div').show('scale', 1000);
+            }
+        }
         if(projectsLoaded == false)
         {
             // console.log($('#projects').scrollTop())
@@ -95,17 +116,18 @@ $(document).ready(function(){
 
             if(projectsContentLoaded == false)
             {
-                if($(window).scrollTop() - windowHeight > 40)
+                if($(window).scrollTop() - 2*windowHeight > 40)
                 {
                     // alert('projects...')
                     console.log("projects...")
                     // projectsLoaded = true
+                    projectsContentLoaded = true;
                     $('#projects h1').show('drop',{direction: 'right'},800);
                     $('#projects .underline').show('drop', {direction: 'left'}, 800);
                     // $('.project-tile').show('drop',{direction: 'down'},800);
                 }
             }
-            if($(window).scrollTop() - windowHeight > 200)
+            if($(window).scrollTop() - 2*windowHeight > 200)
             {
                 // alert('projects...')
                 console.log("projects...")
