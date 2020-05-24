@@ -95,7 +95,7 @@ $(document).ready(function(){
 
             if(projectsContentLoaded == false)
             {
-                if($(window).scrollTop() - windowHeight > 20)
+                if($(window).scrollTop() - windowHeight > 40)
                 {
                     // alert('projects...')
                     console.log("projects...")
@@ -131,8 +131,9 @@ $(document).ready(function(){
             console.log("true");
             $("label[for='"+$(this).attr('id')+"']").removeClass('label-unchecked').addClass('label-checked');
             var num = parseInt($(this).data('slide'));
+            slideCount = num-1;
             // console.log($('.slides:nth-child(1)'))
-            $('.s1').css('margin-left', (-(num-1) *33.33).toString()+'%')
+            $('.s1').css('margin-left', (-(slideCount) *33.33).toString()+'%')
         }
         
     });
