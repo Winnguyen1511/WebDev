@@ -134,7 +134,7 @@ $(document).ready(function(){
                 projectsLoaded = true
                 // $('.project-tile').show('drop',{direction: 'down'},800);
                 var count = 0;
-                projects = $('.project-tile a').each(function(){
+                $('.project-tile a').each(function(){
                     $(this).show('drop', {direction: 'down'}, count*200 +500);
                     count++;
                 });
