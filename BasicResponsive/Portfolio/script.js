@@ -6,6 +6,9 @@ $(document).ready(function(){
     $('#r1').trigger('click');
     $("label[for='r1']").removeClass('label-unchecked').addClass('label-checked');
     $('#skills .skills-box div').hide('fast');
+    $('#rewards h2, #rewards div').hide('fast');
+    $('#language h2, #language .progress').hide('fast');
+
     var slideCount = 0;
     const number_of_slides = 3;
     window.setInterval(function () {
@@ -20,7 +23,7 @@ $(document).ready(function(){
     var skillsLoaded = false;
     var skillsContentLoaded = false;
     console.log(windowHeight)
-    $(".nav-link").click(function(){
+    $(".nav-links").click(function(){
         // console.log("clicked!")
         var link = $(this).data('link');
         // console.log(link);
@@ -77,13 +80,13 @@ $(document).ready(function(){
                     // alert('about')
                     console.log("About...");
                     aboutContentLoaded = true;
-                    $('#about h1').show('drop',{direction: 'right'}, 800);
-                    $('#about .underline').show('drop', {direction: 'left'}, 800);
+                    $('#about h1').show('drop',{direction: 'right'}, 1000);
+                    $('#about .underline').show('drop', {direction: 'left'}, 1000);
                     // $('#about img').slideUp(1000)
                 }
             }
             
-            if($(window).scrollTop() > 200)
+            if($(window).scrollTop() > 400)
             {
                 aboutLoaded = true;
                 $('#about img, #software-web-dev, #teaching-assistance').show('drop',{direction: 'down'}, 800)
@@ -101,11 +104,14 @@ $(document).ready(function(){
                     skillsContentLoaded = true;
                 }
             }
-            if($(window).scrollTop() - windowHeight > 200)
+            if($(window).scrollTop() - windowHeight > 400)
             {
                 skillsLoaded = true;
                 $('#skills .skills-box div').show('scale', 1000);
+                $('#rewards h2, #rewards div, #language h2').show('drop', {direction: 'down'}, 800);
+                $('#language .progress').show('drop', {direction:'right'}, 800);
             }
+            
         }
         if(projectsLoaded == false)
         {
@@ -127,7 +133,7 @@ $(document).ready(function(){
                     // $('.project-tile').show('drop',{direction: 'down'},800);
                 }
             }
-            if($(window).scrollTop() - 2*windowHeight > 200)
+            if($(window).scrollTop() - 2*windowHeight > 400)
             {
                 // alert('projects...')
                 console.log("projects...")

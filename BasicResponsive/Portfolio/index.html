@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="generic-styles.css" type="text/css">
@@ -70,7 +80,7 @@
                             in 2019 and have created products, projects for both industry and education. 
                         </p>
                     </div>
-                    <div class="flex flex-row">
+                    <div id="career" class="flex">
                         <div class="element-medium-space-right border-dashed border-thin border-right-enable" style="border-color: rgb(153, 163, 172);"><h2>Software and Web developer</h2>
                             <div id="software-web-dev">
                                 <p>I love clean and creative coding.</p>
@@ -115,41 +125,76 @@
         </div> -->
     </section>
     <section id="skills" class="content">
-        <div style="height: 120px;" class="content-header">
+        <div style="height: 120px; margin-bottom: 20px;" class="content-header">
             <h1>Skills</h1>
             <div class="underline"></div>
         </div>
         <div id="softskills" class="flex flex-row flex-center">
             <div class="skills-box">
-                <div class="img-container"><img src="/img/creative2.png" alt=""></div>
+                <div class="img-container"><img class="img-responsive" src="/img/creative2.png" alt=""></div>
                 <div class="flex flex-columns flex-center-items">
                     <h2>Creative</h2>
                     <p>Always think outside the box.</p>
                 </div>
             </div>
             <div class="skills-box">
-                <div class="img-container"><img src="/img/consistent2.png" alt=""></div>
+                <div class="img-container"><img class="img-responsive" src="/img/consistent2.png" alt=""></div>
                 <div class="flex flex-columns flex-center-items">
                     <h2>Consistent</h2>
                     <p>I always make plan and finish the task on time, with high standard.</p>
                 </div>
             </div>
             <div class="skills-box">
-                <div class="img-container"><img src="/img/teamwork2.png" alt=""></div>
+                <div class="img-container"><img class="img-responsive" src="/img/teamwork2.png" alt=""></div>
                 <div class="flex flex-columns flex-center-items">
                     <h2>Team-work</h2>
                     <p>I love working in teams, which makes us a lot stronger.</p>
                 </div>
             </div>
             <div class="skills-box">
-                <div class="img-container"><img src="/img/logicalthinking2.png" alt=""></div>
+                <div class="img-container"><img class="img-responsive"  src="/img/logicalthinking2.png" alt=""></div>
                 <div class="flex flex-columns flex-center-items">
                     <h2>Logical thinking</h2>
-                    <p>I love data structure and algorithm. That makes the program runs more sufficient.</p>
+                    <p>I love data structure and algorithm. That makes the program run faster.</p>
                 </div>
             </div>
         </div>
-        <div id="knowledge"></div>
+        <div id="knowledge" class="flex">
+            <div id="rewards">
+                <h2 class="text-center" style="margin-bottom: 20px;">Academic Rewards</h2>
+                <div style="margin-top: 40px;">
+                    <ul>
+                        <li>FAST Techshow 2020 3<sup>rd</sup> prize.</li>
+                        <li>Hakaru+ Corp Scholarship 2019.</li>
+                        <li>Sunflower Mission Scholarship 2017.</li>
+                        <li>CoE First Impression Contest 1<sup>st</sup> prize.</li>
+                        <li>Certfication for Excellent Student in 2017, 2018, 2019, 2020.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div id="language">
+                <h2 class="text-center" style="margin-bottom: 20px;">Programming Experience</h2>
+                <div style="margin-top: 40px;">
+                    <div class="progress" data-lang="C/C++">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">3 years</div>
+                    </div>
+                    <div class="progress" data-lang="Python">
+                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">1 year</div>
+                    </div>
+                    <div class="progress" data-lang="Javascript">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">4 months</div>
+                    </div>
+                    <div class="progress" data-lang="HTML">
+                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">3 months</div>
+                    </div> 
+                    <div class="progress" data-lang="CSS">
+                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">3 months</div>
+                    </div>
+                </div>
+                  
+            </div>
+        </div>
     </section>
     <section id="projects" class="content">
         <div class="span-three content-header" style="height: 120px;">
@@ -194,14 +239,14 @@
     </section>
     <footer>
         <section id="contact">
-            <div>
+            <div id="contact-grid-1">
                 <div id="contact-container-1" class="contact-container">
                     <h1 id="contact-menu">Menu</h1>
                     <ul id="contact-list">
-                        <li><a href="#" class="nav-link" data-link="#welcome-section">Home</a></li>
-                        <li><a href="#" class="nav-link" data-link="#about">About Me</a></li>
-                        <li><a href="#" class="nav-link" data-link="#projects">Projects</a></li>
-                        <li><a href="#" class="nav-link" data-link="#contact">Contact</a></li>
+                        <li><a href="#" class="nav-links" data-link="#welcome-section">Home</a></li>
+                        <li><a href="#" class="nav-links" data-link="#about">About Me</a></li>
+                        <li><a href="#" class="nav-links" data-link="#projects">Projects</a></li>
+                        <li><a href="#" class="nav-links" data-link="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -219,9 +264,9 @@
             <div>
                 <div id="contact-container-3" class="contact-container">
                     <h1>Contact</h1>
-                    <p>9696 Mars</p>
-                    <p>01225434699</p>
-                    <p>team316es@gmail.com</p>
+                    <p>33 Bau Nang 1, Danang City</p>
+                    <p>0964865622</p>
+                    <p>khoanguyen1507vn@gmail.com</p>
                 </div>
             </div>
             
@@ -236,10 +281,11 @@
     
     <nav id="navbar">
         <div>
-            <a href="#" class="nav-link" data-link="#welcome-section">HOME</a>
-            <a href="#" class="nav-link" data-link="#about">ABOUT</a>
-            <a href="#" class="nav-link" data-link="#projects">Projects</a>
-            <a href="#" class="nav-link" data-link="#contact">Contact</a>
+            <a href="#" class="nav-links" data-link="#welcome-section">HOME</a>
+            <a href="#" class="nav-links" data-link="#about">ABOUT</a>
+            <a href="#" class="nav-links" data-link="#skills">Skills</a>
+            <a href="#" class="nav-links" data-link="#projects">Projects</a>
+            <a href="#" class="nav-links" data-link="#contact">Contact</a>
         </div>
     </nav>
 </body>
