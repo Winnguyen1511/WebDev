@@ -323,6 +323,8 @@ body {
 .slide {
     width: 33.33%;
     height: 100vh;
+    /* height: fit-content;
+    width: fit-content; */
     transition: 0.6s;
 }
 .slide-content {
@@ -365,7 +367,8 @@ body {
     /* width: 100vw; */
     /* background-image : linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
     background-image: url("img/ImageHero1.jpg");
-    background-size: 100%;
+    /* background-size: 100%; */
+    /* background-size: cover; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -375,15 +378,23 @@ body {
     font-family:"Raleway", sans-serif;
 }
 #slide2 {
-    background-image: url("img/slide2.jpg");
-    background-size: 100%;
+    background-image: url("img/victor-bg.JPG");
+    /* background-size: 100%; */
+    /* background-size: cover; */
+    /* background-size: cover ; */
+    /* opacity: 0.9; */
 }
 
 #slide3 {
-    background-image: url("img/slide3.jpg");
-    background-size: 100%;
+    background-image: url("img/bg3.png");
+    /* background-size: cover; */
 }
-
+.center-background {
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* background-attachment:fixed; */
+    background-size: cover;
+}
 #welcome-section h1{
     font-style: 'Raleway';
     font-size: 4.6em;
