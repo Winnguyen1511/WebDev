@@ -11,10 +11,6 @@ $(document).ready(function(){
 
     var slideCount = 0;
     const number_of_slides = 3;
-    window.setInterval(function () {
-        $("input[id='r"+(slideCount+1).toString()+"']").trigger('click');
-        slideCount = (slideCount+1)%number_of_slides;
-    }, 5000);
     var windowHeight = $(window).height();
     var aboutLoaded = false;
     var projectsLoaded = false;
@@ -32,6 +28,11 @@ $(document).ready(function(){
         }, 350);
     });
 
+    $('.carousel').carousel({
+        interval: 4000
+        // keyboard: true
+        
+    });
     $("#projects a").hover(
         function(){
         //hander hover in
@@ -148,22 +149,6 @@ $(document).ready(function(){
         }
         // aboutLoaded = 1;
         // console.log('About load=', aboutLoaded)
-    });
-    $('input[type=radio]').click(function(){
-        // console.log($(this).attr('name'));
-        // console.log($(this).attr('id'));
-        // console.log($(this).attr('checked'));
-        $("label").addClass('label-unchecked');
-        if($(this).prop('checked') == true)
-        {
-            console.log("true");
-            $("label[for='"+$(this).attr('id')+"']").removeClass('label-unchecked').addClass('label-checked');
-            var num = parseInt($(this).data('slide'));
-            slideCount = num-1;
-            // console.log($('.slides:nth-child(1)'))
-            $('.s1').css('margin-left', (-(slideCount) *33.33).toString()+'%')
-        }
-        
     });
 
 });
