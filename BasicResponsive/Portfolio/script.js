@@ -28,11 +28,11 @@ $(document).ready(function(){
         }, 350);
     });
 
-    $('.carousel').carousel({
-        interval: 4000
-        // keyboard: true
+    // $('.carousel').carousel({
+    //     interval: 4000
+    //     // keyboard: true
         
-    });
+    // });
     $("#projects a").hover(
         function(){
         //hander hover in
