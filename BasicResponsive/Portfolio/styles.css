@@ -58,9 +58,6 @@ body {
     font-size: 3rem;
     font-weight: 700;
 }
-#slide-about-info {
-    /* display: block; */
-}
 .underline {
     background-color: var(--main-black);
     /* content: "asdasd"; */
@@ -263,11 +260,6 @@ body {
     text-align: center;
 }
 
-
-#projects h1 {
-    
-    
-}
 #navbar {
     position: fixed;
     /* display: inline-block; */
@@ -384,10 +376,6 @@ body {
     
     height: 100%;
 }
-#about h1 {
-
-}
-
 
 #contact {
     
@@ -480,9 +468,6 @@ footer a{
     /* body {
         width: 100vw;
     } */
-    #navbar {
-        /* display: none; */
-    }
     #projects {
         /* display: grid; */
         grid-template-columns: repeat(2, 1fr);
@@ -576,9 +561,6 @@ footer a{
 /* @media (html:not([data-scroll='0'])) */
 @media (max-width:600px)
 {
-    .body, html {
-        /* padding: 0; */
-    }
     #projects {
         display: flex;
         flex-direction: column;
@@ -589,9 +571,6 @@ footer a{
     .project-tile {
         width: 95%;
     }
-    #about {
-        /* height: auto; */
-    }
     #career {
         display: flex;
         flex-direction: column;
@@ -601,9 +580,6 @@ footer a{
     }
     #rewards {
         padding-left: 0;
-    }
-    .progress{
-        /* padding-left: 0; */
     }
     #language {
         padding: 0;
