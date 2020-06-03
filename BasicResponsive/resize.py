@@ -3,7 +3,7 @@ import cv2
 import argparse
 
 width = 1500
-height = 1000
+height = 900
 
 def autoResize(input_dir, output_dir):
     if input_dir == output_dir:
@@ -27,8 +27,8 @@ def autoResize(input_dir, output_dir):
     #lstGrayImg = []
     for root, _, files in os.walk(input_dir):
         if len(files) != 0:
-            orgPaths = [root + "/"+file for file in files if file.endswith(".png")
-                                                            or file.endswith(".JPG")
+            orgPaths = [root + "/"+file for file in files if file.endswith(".PNG") or file.endswith(".png") 
+                                                            or file.endswith(".JPG") or file.endswith(".jpg")
                                                             or file.endswith(".jpeg")]
 
             # rootGray = root.replace(input_dir, output_dir)
