@@ -6,6 +6,7 @@ body {
     --main-blue:#45567d;
     --main-red:#be3144;
     --main-black: #252934;
+    --main-black-opace: rgba(37, 41, 52, 0.9);
     --text--black:#444649;
     --grid-columns: 4;
     --text-link-color: aliceblue;
@@ -279,6 +280,11 @@ body {
     /* transition: background-color 1s; */
     transition: all 0.5s ease-in-out;
 }
+#navbar:hover{
+    background-color: var(--main-black-opace) !important;
+    /* opacity: 0.5; */
+    transition: 0.4s;
+}
 #navbar div {
     /* list-style-type: none; */
     margin: 0;
@@ -326,12 +332,22 @@ body {
     /* height: 900px; */
     max-height: 100vh;
 }
-.carousel-item img{
-    /* position: absolute; */
+.carousel-caption {
+    top:40%;
+    bottom: auto;
 }
-.carousel-indicators li{
-    margin: 0px;
-    width: 100px;
+.carousel-indicators{
+    /* width: 200px; */
+    margin-bottom: 50px;
+    /* height: 50px; */
+}
+.carousel-indicators li {
+    /* width: 50px;
+    height: 50px; */
+    /* border-radius: 100%; */
+    height: 0.5vw !important;
+    margin: 0 !important;
+    width: 4vw !important; 
 }
 #radio-container {
     position: absolute;
@@ -340,17 +356,18 @@ body {
 }
 #welcome-section {
     position: relative;
-    bottom: 180px;
+    /* bottom: 180px; */
     color: white;
 }
 #welcome-section h1{
     font-style: 'Raleway';
-    font-size: 5em;
+    font-size: 6vw;
     margin-bottom: 0px;
     font-weight: 600;
+    text-align: center;
 }
 #welcome-section p{
-    font-size: 1.5em;
+    font-size: 2vw;
     font-weight: 500;
     font-style: italic;
     color: var(--main-red);
