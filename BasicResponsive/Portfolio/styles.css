@@ -323,7 +323,11 @@ body {
 .carousel-item{
     width: 100vw;
     /* height: 100vh; */
+    height: 900px;
     max-height: 100vh;
+}
+.carousel-item img{
+    position: absolute;
 }
 .carousel-indicators li{
     margin: 0px;
