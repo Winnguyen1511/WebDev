@@ -1,0 +1,32 @@
+
+<input id="fptserver-link" type="hidden" name="ftpserver-link" value="@(System.Configuration.ConfigurationManager.AppSettings["ftpserver"])" />
+
+<div class="file-multiple-group" data-id="Tb8_FileDinhKem_CanCus">
+    <div class="row">
+        <div class="col-lg-2">
+            <p><strong>Căn cứ:</strong></p>
+        </div>
+        <div class="col-lg-10">
+            <div class="custom-file">
+                <input id="FileDinhKem_CanCus" type="file" class="custom-file-input" multiple />
+                <label class="custom-file-label" for="FileDinhKem_CanCus"></label>
+            </div>
+            <div class="row">
+                <p><strong>Upload</strong></p>
+                <span id="toolstip-cancu" class="d-inline-block" tabindex="0" data-toggle="popover" title="">
+                    <i class="far fa-question-circle"></i>
+                </span>
+                <div id="upload-content">
+                    <div class="link-loading-div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row dashed-bottom">
+        <div class="col-lg-2">
+
+        </div>
+        <div id="Tb8_FileDinhKem_CanCus" class="link-list col-lg-8">
+        </div>
+    </div>
+</div>

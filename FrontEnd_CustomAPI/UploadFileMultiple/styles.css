@@ -1,0 +1,17 @@
+.link-loading-div {
+    width: var(--link-loading-size);
+    height: var(--link-loading-size);
+    background: url("/Content/Images/Rolling-2.4s-200px.gif");
+    background-size: var(--link-loading-size);
+}
+.link-loading-img{
+    width:100%;
+    height:100%;
+}
+.file-link {
+    /*height: 1rem;
+    overflow:hidden;*/
+    background: rgb(240, 240, 245);
+    margin-bottom:0.35em;
+    font-weight:bold;
+}

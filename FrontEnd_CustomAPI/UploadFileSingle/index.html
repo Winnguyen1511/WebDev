@@ -1,0 +1,29 @@
+<input id="fptserver-link" type="hidden" name="ftpserver-link" value="@(System.Configuration.ConfigurationManager.AppSettings["ftpserver"])" />
+<div class="file-single-group">
+    <div class="row">
+        <div class="col-lg-2">
+            <label for="FileDinhKem_QuyetDinhThongBao">Văn bản đính kèm</label>
+        </div>
+        <div class="col-lg-10">
+            <div class="custom-file">
+                <input id="FileDinhKem_QuyetDinhThongBao" type="hidden" class="custom-file-description" name="FileDinhKem_QuyetDinhThongBao" value="" />
+                <input id="inputQDTB" type="file" class="custom-file-input" />
+                <label class="custom-file-label" for="inputQDTB"></label>
+            </div>
+            <div class="col-lg-1">
+                <div class="icon-box d-flex flex-column flex-center-col">
+                    <a href="#">
+                        <div class="pdf-icon">
+                            <div class="file-loading-div">
+                                <img class="file-loading-img" src="~/Content/Images/Rolling-2.4s-200px.gif" alt="Alternate Text" />
+                            </div>
+                        </div>
+                    </a>
+                    <button type="button" class="btn btn-sm">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<table id="table-danhsach-kttt" class="table table-hover w-100">
+    <thead>
+        <tr>
+            <th style="max-width:23px;">
+                STT
+            </th>
+            <th style="min-width:291px">
+                @Html.DisplayNameFor(model => model.TenVanBan)
+            </th>
+            <th style="width:100px;">
+                @Html.DisplayNameFor(model => model.DataDateFrom)
+            </th>
+            <th style="width:100px;">
+                @Html.DisplayNameFor(model => model.DataDateTo)
+            </th>
+            <th style="min-width:291px;">
+                @Html.DisplayNameFor(model => model.TenVanBanKemTheo)
+            </th>
+            <th style="width:100px;">
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </th>
+            <th style="min-width:238px;">
+                @Html.DisplayNameFor(model => model.GhiChu)
+            </th>
+            <th style="width:65px;">
+                Thao tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var count = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(count)
+                    @{count++;}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenVanBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDateFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDateTo)
+                </td>
+                <td>
+                    @if (item.TenVanBanKemTheo == null)
+                    {
+                        if (item.FileDinhKem_VanBanKemTheo != null)
+                        {
+                            <a class="table-link" href="@item.FileDinhKem_VanBanKemTheo">
+                                <div class="pdf-icon">
+                                </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        if (item.FileDinhKem_VanBanKemTheo != null)
+                        {
+                            <a class="table-link" href="@item.FileDinhKem_VanBanKemTheo">@Html.DisplayFor(modelItem => item.TenVanBanKemTheo)</a>
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.TenVanBanKemTheo)
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GhiChu)
+                </td>
+                <td>
+                    <div class="d-flex w-100">
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.Tb1_DanhSach_TH_KTTT_id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Tb1_DanhSach_TH_KTTT_id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Tb1_DanhSach_TH_KTTT_id })*@
+                        <button class="btn btn-sm btn-data" type="button" onclick="editGetCallback(this)" data-id=@item.Tb1_DanhSach_TH_KTTT_id.ToString() data-name="@item.TenVanBan" data-date="@item.NgayTao">
+                            <span style="color:#007bff"><i class="far fa-edit"></i></span>
+                        </button>
+                        <button class="btn btn-sm btn-data" type="button" onclick="deleteGetCallback(this)" data-id=@item.Tb1_DanhSach_TH_KTTT_id.ToString() data-name="@item.TenVanBan" data-date="@item.NgayTao">
+                            <span style="color:#007bff"><i class="far fa-trash-alt"></i></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
